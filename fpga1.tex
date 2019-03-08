@@ -1,0 +1,60 @@
+\documentclass{beamer}
+\usepackage{graphicx}
+\usetheme{Boadilla}
+\usecolortheme{beaver}
+\title{Floating Point Adder}
+\author{EE18ACMTECH11006    Bhavani Machnoori   \\ 
+EE18MTECH11005   Ajay Hase}
+
+\date{\today}
+
+\begin{document}
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\includegraphics[scale=0.5]{table1.png}
+
+\textbf{Steps for converting decimal to floating point number:} \\
+
+1. Convert a Decimal number to Binary number $(975.75)_10$ = $(1111001111.11)_2 $ \\
+2. Normalize the number 1.11100111111* $2^9$\\
+3. From this normalized number we can fill all 32-bits of floating point number
+Sign bit = 0 (number is positive) \\
+4. Exponent = Bias + 9 = 127 + 9 = $(136)_10$ = $(1000 1000)_2$ \\
+5. Fraction part will contain all the bits after decimal point. \\
+6. $(975.75)_10$ is expressed as shown below in single precision floating point format.\\
+\includegraphics[scale=0.45]{table2.png}
+\end{frame}
+\begin{frame}
+Steps for floating point adder:\\
+1.Sort:Find the largest number.\\
+2.Align:Make the exponent equal.\\
+3.Add/Sub:Perform addition or subtraction\\
+4:Normalize: set MSB of mantissa  
+\end{frame}
+\begin{frame}
+Examples:
+
+\includegraphics[scale=0.7]{Untitled11.png}
+\end{frame}
+
+\begin{frame}
+
+
+Flow chart : 
+\includegraphics[scale=0.45]{algorithm.png}
+
+\end{frame}
+\begin{frame}
+\textbf{Applications:
+}  \\
+
+Floating point numbers are used in various applications such as medical
+imaging, radar, telecommunications:\\
+1. CPU \\
+2. Calculators
+\end{frame}
+
+\end{document}        
